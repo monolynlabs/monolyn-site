@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Monolyn Labs icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Monolyn Labs icon">
   <title>Monolyn Labs</title>
-  <rect width="512" height="512" fill="#F5F5F5"/>
-  <!-- Portal Line v2 Balanced (geometric reconstruction) -->
-  <rect x="64" y="64" width="384" height="384" rx="116" fill="#111111"/>
-  <rect x="128" y="128" width="256" height="256" rx="52" fill="#F5F5F5"/>
-  <rect x="224" y="144" width="64" height="224" rx="32" fill="#00B3A4"/>
+  <!-- Placeholder mark. Replace with the official Portal Line v2 Balanced exports when ready. -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="#F5F5F5"/>
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="#E5E5E5"/>
+  <g id="mark" fill="#111111">
+    <rect x="162" y="132" width="88" height="248" rx="44"/>
+    <rect x="262" y="132" width="88" height="248" rx="44"/>
+  </g>
+  <g id="accent" fill="#00B3A4">
+    <rect x="248" y="104" width="16" height="304" rx="8"/>
+  </g>
 </svg>
