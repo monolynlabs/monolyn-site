@@ -1,4 +1,5 @@
+Contact: mailto:security@monolyn.nl
 Contact: mailto:support@monolyn.nl
 Preferred-Languages: en, nl
 Canonical: https://monolyn.nl/.well-known/security.txt
-Expires: 2026-07-23
+Expires: 2027-02-12
