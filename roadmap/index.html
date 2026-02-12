@@ -1,102 +1,124 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Monolyn Labs roadmap: upcoming iOS apps and Jira Cloud tools. Dates are intentionally omitted. Privacy-first, minimal data, no third-party trackers." />
-    <link rel="canonical" href="https://monolyn.nl/roadmap/" />
-
-    <meta property="og:title" content="Roadmap — Monolyn Labs" />
-    <meta property="og:description" content="Monolyn Labs roadmap: upcoming iOS apps and Jira Cloud tools. Dates are intentionally omitted. Privacy-first, minimal data, no third-party trackers." />
-    <meta property="og:url" content="https://monolyn.nl/roadmap/" />
-    <meta property="og:image" content="https://monolyn.nl/assets/og.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <meta name="theme-color" content="#F5F5F5" />
-    <link rel="icon" href="/favicon.ico?v=20260206" sizes="any" />
-    <link rel="icon" href="/assets/favicon.svg?v=20260206" type="image/svg+xml" />
-    <link rel="icon" href="/assets/favicon-32.png?v=20260206" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260206" />
-
-    <link rel="stylesheet" href="/css/style.css?v=20260206" />
-    <title>Roadmap — Monolyn Labs</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roadmap — Monolyn Labs</title>
+  <meta name="description" content="A lightweight view of what Monolyn Labs is building next (no dates)." />
+  <link rel="canonical" href="https://monolyn.nl/roadmap/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <meta name="theme-color" content="#F5F5F5" />
+</head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <header>
-    <div class="header-inner">
-      <a class="brand" href="/" aria-label="Monolyn Labs">
-        <img class="brand-mark" src="/assets/icon.svg?v=20260206" alt="" width="28" height="28" />
-        <span class="brand-name">Monolyn Labs</span>
-      </a>
+  <header class="site-header">
+    <div class="nav glass">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Monolyn Labs home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Monolyn Labs</span>
+        </a>
 
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/products/">Products</a></li>
-          <li><a href="/support/">Support</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-        </ul>
-      </nav>
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/products/">Products</a>
+<a class="nav-link" href="/support/">Support</a>
+<a class="nav-link" href="/privacy/">Privacy</a>
+<a class="nav-link" href="/terms/">Terms</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <div class="container">
-    <main id="main">
-      <h1>Roadmap</h1>
-      <p class="lede">
-        A lightweight view of what we’re building next. Dates are intentionally omitted — the goal is predictable shipping,
-        maintainability, and stable support.
-      </p>
+  <main id="content" class="main">
+    <div class="container">
+<section>
+    <div class="kicker">Roadmap</div>
+    <h1>What we’re building next</h1>
+    <p class="lede">
+      A lightweight view of what we’re building next. Dates are intentionally omitted — the goal is predictable shipping, maintainability, and stable support.
+      Currently shipping products are listed on <a href="/products/">Products</a>.
+    </p>
 
-      <div class="actions compact">
-        <span class="trust"><span class="dot"></span>Offline • No account • No tracking</span>
+    <div class="chips" aria-label="Trust line">
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Offline</span>
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No account</span>
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No tracking</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Privacy-first iOS apps</h2>
       </div>
+    </div>
 
-      <p class="meta">
-        Currently shipping products are listed on <a href="/products/">Products</a>.
-      </p>
+    <div class="grid">
+      <article class="card glass strong" style="grid-column: span 12;">
+        <div class="card-head">
+          <div class="title">TruePortrait: Portrait Enhancer</div>
+          <div class="badge release"><span class="dot" aria-hidden="true"></span>Releasing</div>
+        </div>
+        <p>Privacy-first portrait enhancements — local processing, no account, no cloud.</p>
+      </article>
+    </div>
+  </section>
 
-      <h2 id="ios" class="section-title mt0">Privacy-first iOS apps</h2>
-      <div class="grid" role="list">
-
-
-        <article class="card half" role="listitem">
-          <div class="card-title">
-            <h3>TruePortrait: Portrait Enhancer</h3>
-            <span class="badge soon">Releasing</span>
-          </div>
-          <p class="meta">Privacy-first portrait enhancements — local processing, no account, no cloud.</p>
-        </article>
-</div>
-
-      <h2 id="jira" class="section-title">Jira tools</h2>
-      <div class="grid" role="list">
-
-        <article class="card" role="listitem">
-          <div class="card-title">
-            <h3>Sprint Canvas</h3>
-            <span class="badge dev">Jira Cloud (Forge)</span>
-          </div>
-          <p class="meta">A lightweight sprint planning surface with a capacity gauge overlay.</p>
-          <p class="meta">Status: in progress.</p>
-        </article>
-
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Jira tools</h2>
       </div>
+    </div>
 
-      <hr />
+    <div class="grid">
+      <article class="card glass strong" style="grid-column: span 12;">
+        <div class="card-head">
+          <div class="title">Sprint Canvas</div>
+          <div class="badge progress"><span class="dot" aria-hidden="true"></span>In progress</div>
+        </div>
+        <p>Jira Cloud (Forge). A lightweight sprint planning surface with a capacity gauge overlay.</p>
+      </article>
+    </div>
 
-      <p class="meta">
+    <div class="note glass" style="margin-top: var(--s4);">
+      <p style="margin: 0; color: var(--muted);">
         Notes: roadmap items can change as scope is refined. We avoid dates unless we’re within a short, predictable release window.
       </p>
-    </main>
+    </div>
+  </section>
+    </div>
+  </main>
 
-    <footer>
-      <div>© 2026 Monolyn Labs • KVK 99726009 • <a href="/support/">support@monolyn.nl</a> • <a href="/roadmap/">Roadmap</a></div>
-      <div class="meta">Offline-first iOS apps + Jira tools. Privacy-first. Minimal data. No third‑party trackers.</div>
-    </footer>
-  </div>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-tagline">
+          Offline-first iOS apps + Jira tools. Privacy-first. Minimal data. No third‑party trackers.
+        </div>
+        <div class="footer-meta">
+          © 2026 Monolyn Labs • KVK 99726009 • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a> • <a href="/roadmap/">Roadmap</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/products/">Products</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://instagram.com/monolynlabs" rel="noopener noreferrer">Instagram</a>
+        <a href="https://x.com/monolynlabs" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>

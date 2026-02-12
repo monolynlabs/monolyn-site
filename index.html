@@ -1,128 +1,191 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Monolyn Labs builds offline-first iOS apps and Jira Cloud tools for privacy-sensitive workflows. Data minimization by default: no accounts, no subscriptions, no third-party trackers." />
-    <link rel="canonical" href="https://monolyn.nl/" />
-
-    <meta property="og:title" content="Monolyn Labs — Offline-first iOS apps + Jira Cloud tools" />
-    <meta property="og:description" content="Monolyn Labs builds offline-first iOS apps and Jira Cloud tools for privacy-sensitive workflows. Data minimization by default: no accounts, no subscriptions, no third-party trackers." />
-    <meta property="og:url" content="https://monolyn.nl/" />
-    <meta property="og:image" content="https://monolyn.nl/assets/og.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <meta name="theme-color" content="#F5F5F5" />
-    <link rel="icon" href="/favicon.ico?v=20260206" sizes="any" />
-    <link rel="icon" href="/assets/favicon.svg?v=20260206" type="image/svg+xml" />
-    <link rel="icon" href="/assets/favicon-32.png?v=20260206" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260206" />
-
-    <link rel="stylesheet" href="/css/style.css?v=20260206" />
-    <title>Monolyn Labs — Offline-first iOS apps + Jira Cloud tools</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monolyn Labs — Offline-first iOS apps + Jira Cloud tools</title>
+  <meta name="description" content="Monolyn Labs builds offline-first iOS apps and Jira Cloud tools for privacy-sensitive workflows. No accounts. No third‑party trackers." />
+  <link rel="canonical" href="https://monolyn.nl/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <meta name="theme-color" content="#F5F5F5" />
+</head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <header>
-    <div class="header-inner">
-      <a class="brand" href="/" aria-label="Monolyn Labs">
-        <img class="brand-mark" src="/assets/icon.svg?v=20260206" alt="" width="28" height="28" />
-        <span class="brand-name">Monolyn Labs</span>
-      </a>
+  <header class="site-header">
+    <div class="nav glass">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Monolyn Labs home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Monolyn Labs</span>
+        </a>
 
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="/products/">Products</a></li>
-          <li><a href="/support/">Support</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-        </ul>
-      </nav>
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+<a class="nav-link" href="/" aria-current="page">Home</a>
+<a class="nav-link" href="/products/">Products</a>
+<a class="nav-link" href="/support/">Support</a>
+<a class="nav-link" href="/privacy/">Privacy</a>
+<a class="nav-link" href="/terms/">Terms</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <div class="container">
-    <main id="main">
-      <h1>Offline-first tools for iOS and Jira</h1>
-      <p class="lede">
-        Monolyn Labs builds offline-first iOS apps and Jira Cloud tools for privacy-sensitive workflows.
-        Data minimization by default: no accounts, no subscriptions, no third‑party trackers.
-        Built for reliability and long‑term maintenance.
+  <main id="content" class="main">
+    <div class="container">
+<section>
+    <div class="kicker">Monolyn Labs</div>
+    <h1>Offline-first tools for iOS and Jira</h1>
+    <p class="lede">
+      Monolyn Labs builds offline-first iOS apps and Jira Cloud tools for privacy-sensitive workflows.
+      Data minimization by default: no accounts, no subscriptions, no third‑party trackers.
+      Built for reliability and long‑term maintenance.
+    </p>
+
+    <div class="chips" aria-label="Trust line">
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Offline</span>
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No account</span>
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No tracking</span>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="/products/">View products</a>
+      <a class="btn btn-secondary" href="/support/">Support</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Privacy-first iOS apps</h2>
+        <p>Offline-first utilities with a strict v1 scope: one repeated problem, one main screen.</p>
+      </div>
+      <a class="muted-link" href="/roadmap/">Upcoming work →</a>
+    </div>
+
+    <div class="grid">
+      <article class="card glass strong">
+        <div class="card-head">
+          <div class="title">Grain</div>
+          <div class="badge live"><span class="dot" aria-hidden="true"></span>Live</div>
+        </div>
+        <p>Film Grain Editor — apply film grain presets and export back to Photos.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/film-grain-editor/id6755780302" rel="noopener noreferrer">View on the App Store</a>
+          <a class="btn btn-secondary" href="/products/">All products</a>
+        </div>
+      </article>
+
+      <article class="card glass strong">
+        <div class="card-head">
+          <div class="title">Snapshot: Expense Tracker</div>
+          <div class="badge live"><span class="dot" aria-hidden="true"></span>Live</div>
+        </div>
+        <p>Snap a receipt, enter amount, keep an offline monthly total — no account, no cloud.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/snapshot-expense-tracker/id6756893321" rel="noopener noreferrer">Search on the App Store</a>
+          <a class="btn btn-secondary" href="/products/">All products</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Jira tools</h2>
+        <p>Lightweight Jira Cloud apps focused on planning clarity and execution speed.</p>
+      </div>
+      <a class="muted-link" href="/roadmap/">Roadmap →</a>
+    </div>
+
+    <div class="grid">
+      <article class="card glass strong" style="grid-column: span 12;">
+        <div class="card-head">
+          <div class="title">Sprint Canvas</div>
+          <div class="badge progress"><span class="dot" aria-hidden="true"></span>In progress</div>
+        </div>
+        <p>Jira Cloud (Forge). A lightweight sprint planning surface with a capacity gauge overlay.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="/roadmap/">View roadmap</a>
+          <a class="btn btn-secondary" href="/support/">Contact support</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Support</h2>
+        <p>Fastest way to reach us: email support. Security review is available by email.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="card glass">
+        <div class="card-head">
+          <div class="title">Support</div>
+          <div class="badge"><span class="dot" aria-hidden="true"></span>Email</div>
+        </div>
+        <p><a href="mailto:support@monolyn.nl">support@monolyn.nl</a></p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="/support/">Support details</a>
+        </div>
+      </article>
+
+      <article class="card glass">
+        <div class="card-head">
+          <div class="title">Security & privacy review</div>
+          <div class="badge"><span class="dot" aria-hidden="true"></span>Policy</div>
+        </div>
+        <p>
+          <a href="mailto:security@monolyn.nl">security@monolyn.nl</a><br/>
+          <span style="color: var(--muted); font-size: 14px;">Security policy: <a href="/.well-known/security.txt">/.well-known/security.txt</a></span>
+        </p>
+        <div class="card-actions">
+          <a class="btn btn-secondary" href="/privacy/">Privacy policy</a>
+          <a class="btn btn-secondary" href="/terms/">Terms</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="note glass" style="margin-top: var(--s4);">
+      <p style="color: var(--muted);">
+        Company: KVK 99726009
       </p>
+    </div>
+  </section>
+    </div>
+  </main>
 
-      <div class="actions">
-        <span class="trust"><span class="dot"></span>Offline • No account • No tracking</span>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-tagline">
+          Offline-first iOS apps + Jira tools. Privacy-first. Minimal data. No third‑party trackers.
+        </div>
+        <div class="footer-meta">
+          © 2026 Monolyn Labs • KVK 99726009 • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a> • <a href="/roadmap/">Roadmap</a>
+        </div>
       </div>
-
-      <div class="actions">
-        <a class="button primary" href="/products/">View products</a>
-        <a class="button" href="/support/">Support</a>
+      <div class="footer-links">
+        <a href="/products/">Products</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://instagram.com/monolynlabs" rel="noopener noreferrer">Instagram</a>
+        <a href="https://x.com/monolynlabs" rel="noopener noreferrer">X</a>
       </div>
+    </div>
+  </footer>
 
-      <div class="grid" role="list">
-        <section class="card half" role="listitem">
-          <div class="card-title">
-            <h2 class="m0">Privacy-first iOS apps</h2>
-            <span class="badge live">Live + shipping</span>
-          </div>
-          <p class="meta">
-            Offline-first utilities with a strict v1 scope: one repeated problem, one main screen.
-          </p>
-          <p>
-            Live now: <a href="/products/#grain">Grain</a> and <a href="/products/#snapshot">Snapshot: Expense Tracker</a>.
-          </p>
-          <p class="meta">Upcoming work is listed on the <a href="/roadmap/">Roadmap</a>.</p>
-        </section>
-
-        <section class="card half" role="listitem">
-          <div class="card-title">
-            <h2 class="m0">Jira tools</h2>
-            <span class="badge dev">Jira Cloud (Forge)</span>
-          </div>
-          <p class="meta">
-            Lightweight Jira Cloud apps focused on planning clarity and execution speed.
-          </p>
-          <p>
-            In progress: <a href="/roadmap/#jira">Sprint Canvas</a>.
-          </p>
-        </section>
-
-        <section class="card third" role="listitem">
-          <h2 class="m0">Support</h2>
-          <p class="meta">Fastest way to reach us:</p>
-          <p><a class="code" href="mailto:support@monolyn.nl">support@monolyn.nl</a></p>
-
-          <p class="meta m0">Security &amp; privacy review: <a href="mailto:support@monolyn.nl">support@monolyn.nl</a></p>
-          <p class="meta m0">Security policy: <a href="/.well-known/security.txt">/.well-known/security.txt</a></p>
-          <p class="meta m0">Company: <span class="code">KVK 99726009</span></p>
-</section>
-
-        <section class="card third" role="listitem">
-          <h2 class="m0">Social</h2>
-          <p class="meta">Updates and release notes:</p>
-          <p>
-            <a href="https://instagram.com/monolynlabs" rel="me noopener">Instagram</a><br/>
-            <a href="https://x.com/monolynlabs" rel="me noopener">X</a>
-          </p>
-        </section>
-
-        <section class="card third" role="listitem">
-          <h2 class="m0">Policies</h2>
-          <p class="meta">Plain‑English policies:</p>
-          <p>
-            <a href="/privacy/">Privacy</a><br/>
-            <a href="/terms/">Terms</a>
-          </p>
-        </section>
-      </div>
-    </main>
-
-    <footer>
-      <div>© 2026 Monolyn Labs • KVK 99726009 • <a href="/support/">support@monolyn.nl</a> • <a href="/roadmap/">Roadmap</a></div>
-      <div class="meta">Offline-first iOS apps + Jira tools. Privacy-first. Minimal data. No third‑party trackers.</div>
-    </footer>
-  </div>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
