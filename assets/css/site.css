@@ -57,7 +57,7 @@
   :root{
     color-scheme: dark;
 
-    --bg: #0B0B0C;
+    --bg: #07090A;
     --text: rgba(255, 255, 255, 0.90);
     --muted: rgba(255, 255, 255, 0.66);
     --muted-2: rgba(255, 255, 255, 0.52);
@@ -73,10 +73,10 @@
   
 
     /* Dark mode: smooth, continuous glows (no hard band edges) */
-    --bg-grad-1: radial-gradient(1900px 1500px at 18% -18%, rgba(0,179,164,0.22) 0%, rgba(0,179,164,0.14) 34%, rgba(0,179,164,0.08) 56%, rgba(0,179,164,0.04) 74%, rgba(0,179,164,0.00) 100%);
-    --bg-grad-2: radial-gradient(1700px 1300px at 85% -22%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.07) 38%, rgba(255,255,255,0.03) 60%, rgba(255,255,255,0.01) 78%, rgba(255,255,255,0.00) 100%);
-    --bg-grad-3: radial-gradient(1400px 1100px at 22% 94%, rgba(0,179,164,0.10) 0%, rgba(0,179,164,0.06) 40%, rgba(0,179,164,0.03) 62%, rgba(0,179,164,0.00) 100%);
-    --grain-opacity: 0.02;
+    --bg-grad-1: radial-gradient(1900px 1500px at 18% -18%, rgba(0,179,164,0.14) 0%, rgba(0,179,164,0.10) 34%, rgba(0,179,164,0.06) 56%, rgba(0,179,164,0.03) 74%, rgba(0,179,164,0.00) 100%);
+    --bg-grad-2: radial-gradient(1700px 1300px at 85% -22%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 38%, rgba(255,255,255,0.02) 60%, rgba(255,255,255,0.01) 78%, rgba(255,255,255,0.00) 100%);
+    --bg-grad-3: radial-gradient(1400px 1100px at 22% 94%, rgba(0,179,164,0.07) 0%, rgba(0,179,164,0.04) 40%, rgba(0,179,164,0.02) 62%, rgba(0,179,164,0.00) 100%);
+    --grain-opacity: 0.012;
 }
 }
 
