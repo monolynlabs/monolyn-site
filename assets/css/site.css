@@ -47,8 +47,8 @@
   --focus: 2px solid rgba(0, 179, 164, 0.70);
 
   /* Background glows (kept subtle; avoid mid-page banding) */
-  --bg-grad-1: radial-gradient(1100px 800px at 18% -22%, rgba(0,179,164,0.10), rgba(0,179,164,0.00) 60%);
-  --bg-grad-2: radial-gradient(950px 700px at 85% -18%, rgba(17,17,17,0.06), rgba(17,17,17,0.00) 55%);
+  --bg-grad-1: radial-gradient(1600px 1200px at 18% 0%, rgba(0,179,164,0.10) 0%, rgba(0,179,164,0.06) 35%, rgba(0,179,164,0.02) 55%, rgba(0,179,164,0.00) 82%);
+  --bg-grad-2: radial-gradient(1400px 1100px at 85% 0%, rgba(17,17,17,0.08) 0%, rgba(17,17,17,0.04) 38%, rgba(17,17,17,0.02) 60%, rgba(17,17,17,0.00) 86%);
 }
 
 @media (prefers-color-scheme: dark){
@@ -71,8 +71,8 @@
   
 
     /* Dark mode: slightly stronger top glows; still smooth */
-    --bg-grad-1: radial-gradient(1100px 800px at 18% -22%, rgba(0,179,164,0.18), rgba(0,179,164,0.00) 58%);
-    --bg-grad-2: radial-gradient(950px 700px at 85% -18%, rgba(255,255,255,0.07), rgba(255,255,255,0.00) 55%);
+    --bg-grad-1: radial-gradient(1800px 1300px at 18% 0%, rgba(0,179,164,0.18) 0%, rgba(0,179,164,0.11) 35%, rgba(0,179,164,0.05) 58%, rgba(0,179,164,0.00) 88%);
+    --bg-grad-2: radial-gradient(1600px 1200px at 85% 0%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 38%, rgba(255,255,255,0.02) 60%, rgba(255,255,255,0.00) 88%);
 }
 }
 
@@ -110,7 +110,6 @@ body::before{
               var(--bg-grad-2),
               var(--bg);
   background-repeat: no-repeat;
-  background-size: cover;
   pointer-events: none;
 }
 
