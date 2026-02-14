@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Support — Sprint Canvas — Monolyn Labs</title>
+  <meta name="description" content="Sprint Canvas support: troubleshooting, bug reports, and privacy notes.">
+  <link rel="stylesheet" href="/site.css?v=14">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Monolyn Labs</a>
+    <details class="menu">
+      <summary>Open menu</summary>
+      <nav class="nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/products/">Products</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="content" class="main">
+  <p class="eyebrow">Support</p>
+  <h1>Support — Sprint Canvas</h1>
+
+  <p><strong>Support contact:</strong> <a href="mailto:support@monolyn.nl">support@monolyn.nl</a><br>
+  <strong>Target response time:</strong> within 2 business days (best effort)</p>
+
+  <p>Please avoid sending sensitive personal data.</p>
+
+  <h2>What the app does</h2>
+  <p>Sprint Canvas adds a Capacity page to Jira projects (Project page module). It uses a selected Scrum board to compute demand vs capacity for the next 3 sprints and shows:</p>
+  <ul>
+    <li>demand vs capacity (in Story Points or Hours/Days, depending on board estimation)</li>
+    <li>utilization %</li>
+    <li>health for the next 3 sprints (OK / Overbooked / No signal)</li>
+    <li>data quality signals (unestimated / unassigned)</li>
+  </ul>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Scrum boards only (Kanban boards are not supported).</li>
+    <li>The app focuses on the next 3 sprints (active + future).</li>
+    <li>Best signal requires:
+      <ul>
+        <li>issues estimated, and</li>
+        <li>issues assigned to people (for assignee-based capacity scaling / overrides)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Troubleshooting</h2>
+
+  <h3>1) Health shows “No signal”</h3>
+  <p><strong>Common causes:</strong></p>
+  <ul>
+    <li>Sprint has no issues</li>
+    <li>Issues exist but are unestimated / unassigned</li>
+    <li>Board estimation is not configured</li>
+  </ul>
+  <p><strong>What to do:</strong></p>
+  <ul>
+    <li>Add estimates to remaining issues</li>
+    <li>Assign issues to people</li>
+    <li>Ensure the board uses a numeric estimation field (Story Points or time)</li>
+  </ul>
+
+  <h3>2) Utilization is missing / blank</h3>
+  <p><strong>Utilization relies on:</strong></p>
+  <ul>
+    <li>detected estimation field (Story Points or time)</li>
+    <li>a non-empty sprint issue set</li>
+    <li>configured capacity</li>
+  </ul>
+  <p><strong>What to do:</strong></p>
+  <ul>
+    <li>Confirm sprint issues have estimates</li>
+    <li>Confirm capacity is configured in Settings</li>
+  </ul>
+
+  <h3>3) I changed scopes and now the app errors</h3>
+  <p>If app scopes changed, Jira may require a re-consent / upgrade cycle.</p>
+  <p><strong>What to do (admin/maintainer):</strong></p>
+  <ul>
+    <li><code>forge deploy -e production</code></li>
+    <li><code>forge install --upgrade -e production -p Jira -s .atlassian.net</code></li>
+  </ul>
+
+  <h2>Data &amp; privacy</h2>
+  <p>The app does not send Jira data to external services. It stores only project configuration (board id + capacity settings + optional overrides) in Forge Storage.</p>
+  <p>Privacy policy: <a href="/privacy/">/privacy/</a></p>
+
+  <h2>Reporting bugs / feature requests</h2>
+  <p>Include:</p>
+  <ul>
+    <li>Jira site URL</li>
+    <li>project key</li>
+    <li>board id (if known)</li>
+    <li>steps to reproduce + screenshots</li>
+    <li>Forge environment (development/production) and app version</li>
+  </ul>
+
+  <h2>Marketplace</h2>
+  <p>If you arrived here from Atlassian Marketplace, use Support and Privacy Policy above.</p>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Monolyn Labs • KVK 99726009 • Keurenplein 41, 1069CD Amsterdam, Box D1351, Netherlands • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a></p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/products/">Products</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="https://x.com/monolynlabs" rel="noopener">X</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
