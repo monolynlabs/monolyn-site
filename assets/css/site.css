@@ -1,4 +1,4 @@
-/* Monolyn Labs — Enterprise Glass (static, no trackers) — v12
+/* Monolyn Labs — Enterprise Glass (static, no trackers) — v13
    - No external fonts (uses system + optional Inter if installed)
    - Subtle glass surfaces with solid fallback (no backdrop-filter required)
 */
@@ -660,6 +660,11 @@ p{
 .footer-tagline{
   color: var(--muted);
   max-width: 70ch;
+}
+
+/* If footer tagline is removed, tighten spacing */
+.footer-tagline:empty + .footer-meta{
+  margin-top: 0;
 }
 
 .footer-links{
