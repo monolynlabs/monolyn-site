@@ -1,86 +1,142 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark light">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Products — Monolyn Labs</title>
-  <meta name="description" content="Monolyn Labs products: privacy-first iOS apps and Atlassian Cloud tools.">
-  <link rel="stylesheet" href="/site.css?v=14">
+  <meta name="description" content="Focused privacy-first iOS apps and Atlassian Cloud tools: data minimization, no ads, no third‑party tracking." />
+  <link rel="canonical" href="https://monolyn.nl/products/" />
+  <link rel="icon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=14" />
+  <meta name="theme-color" content="#F5F5F5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#07090A" media="(prefers-color-scheme: dark)" />
 </head>
 <body>
-<a class="skip" href="#content">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/">Monolyn Labs</a>
-    <details class="menu">
-      <summary>Open menu</summary>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav glass">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Monolyn Labs home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Monolyn Labs</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/products/" aria-current="page">Products</a>
+<a class="nav-link" href="/support/">Support</a>
+<a class="nav-link" href="/privacy/">Privacy</a>
+<a class="nav-link" href="/terms/">Terms</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="main">
+    <div class="container">
+<section>
+    <div class="kicker">Products</div>
+    <h1>Focused tools for data-sensitive workflows</h1>
+    <p class="lede">
+      Single-purpose products for data-sensitive workflows: data minimization, no ads, and no third‑party trackers.
+      This page lists currently shipping products. Upcoming releases and in‑progress work live on the <a href="/roadmap/">Roadmap</a>.
+    </p>
+
+        <div class="chips" aria-label="Trust line">
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Data minimization</span>
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No ads</span>
+      <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No third‑party trackers</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Privacy-first iOS apps</h2>
+        <p>Single-purpose iOS utilities built for data-sensitive workflows — data minimization, no ads, no third‑party trackers.</p>
+      </div>
+      <a class="muted-link" href="/roadmap/">Roadmap →</a>
+    </div>
+
+    <div class="grid">
+      <article class="card glass strong">
+        <div class="card-head">
+          <div class="title">Grain</div>
+          <div class="badge live"><span class="dot" aria-hidden="true"></span>Live</div>
+        </div>
+        <p>Film Grain Editor — apply film grain presets and export back to Photos.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/film-grain-editor/id6755780302" rel="noopener noreferrer">View on the App Store</a>
+        </div>
+      </article>
+
+      <article class="card glass strong">
+        <div class="card-head">
+          <div class="title">Snapshot: Expense Tracker</div>
+          <div class="badge live"><span class="dot" aria-hidden="true"></span>Live</div>
+        </div>
+        <p>Snap a receipt, enter amount, keep a private monthly total — no account, no cloud.</p>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/snapshot-expense-tracker/id6756893321" rel="noopener noreferrer">View on the App Store</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Atlassian Cloud tools</h2>
+        <p>Lightweight Atlassian Cloud apps for Jira, focused on planning clarity and execution speed.</p>
+      </div>
+      <a class="muted-link" href="/roadmap/">What’s in progress →</a>
+    </div>
+
+    <div class="grid">
+      <article class="card glass" style="grid-column: span 12;">
+        <div class="card-head">
+          <div class="title">Sprint Canvas</div>
+          <div class="badge progress"><span class="dot" aria-hidden="true"></span>In development</div>
+        </div>
+        <p>See the <a href="/roadmap/">Roadmap</a> for what’s in progress.</p>
+      </article>
+    </div>
+
+    <div class="note glass" style="margin-top: var(--s4);">
+      <p style="color: var(--muted);">
+        Notes: availability and pricing vary by region. Product status labels reflect our current release pipeline and may change.
+      </p>
+    </div>
+  </section>
+    </div>
+  </main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-tagline"></div>
+        <div class="footer-meta">
+          © 2026 Monolyn Labs • KVK 99726009 • Keurenplein 41, 1069CD Amsterdam, Box D1351, Netherlands • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>
+        </div>
+      </div>
+      <div class="footer-links">
         <a href="/products/">Products</a>
         <a href="/support/">Support</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
-      </nav>
-    </details>
-  </div>
-</header>
+        <a href="https://x.com/monolynlabs" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
 
-<main id="content" class="main">
-  <p class="eyebrow">Products</p>
-  <h1>Focused tools for data-sensitive workflows</h1>
-
-  <p>Single-purpose products for data-sensitive workflows: data minimization, no ads, and no third‑party trackers. This page lists currently shipping products. Upcoming releases and in‑progress work live on the <a href="/roadmap/">Roadmap</a>.</p>
-
-  <p class="chips">Data minimization <span aria-hidden="true">•</span> No ads <span aria-hidden="true">•</span> No third‑party trackers</p>
-
-  <h2>Privacy-first iOS apps</h2>
-  <p>Single-purpose iOS utilities built for data-sensitive workflows — data minimization, no ads, no third‑party trackers.</p>
-  <p><a href="/roadmap/">Roadmap →</a></p>
-
-  <section class="product">
-    <h3>Grain</h3>
-    <p><strong>Live</strong></p>
-    <p>Film Grain Editor — apply film grain presets and export back to Photos.</p>
-    <p><a href="https://apps.apple.com/us/app/film-grain-editor/id6755780302" rel="noopener">View on the App Store</a></p>
-  </section>
-
-  <section class="product">
-    <h3>Snapshot: Expense Tracker</h3>
-    <p><strong>Live</strong></p>
-    <p>Snap a receipt, enter amount, keep a private monthly total — no account, no cloud.</p>
-    <p><a href="https://apps.apple.com/us/app/snapshot-expense-tracker/id6756893321" rel="noopener">View on the App Store</a></p>
-  </section>
-
-  <h2>Atlassian Cloud tools</h2>
-  <p>Lightweight Atlassian Cloud apps for Jira, focused on planning clarity and execution speed.</p>
-  <p><a href="/roadmap/">What’s in progress →</a></p>
-
-  <section class="product">
-    <h3>Sprint Canvas</h3>
-    <p><strong>In development</strong></p>
-    <p>
-      Docs: <a href="/products/sprint-canvas/">/products/sprint-canvas/</a> •
-      Support: <a href="/products/sprint-canvas/support/">/products/sprint-canvas/support/</a> •
-      Privacy: <a href="/privacy/">/privacy/</a> •
-      Roadmap: <a href="/roadmap/">/roadmap/</a>
-    </p>
-    <p>Notes: availability and pricing vary by region. Product status labels reflect our current release pipeline and may change.</p>
-  </section>
-
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© 2026 Monolyn Labs • KVK 99726009 • Keurenplein 41, 1069CD Amsterdam, Box D1351, Netherlands • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a></p>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="/products/">Products</a>
-      <a href="/support/">Support</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
-      <a href="https://x.com/monolynlabs" rel="noopener">X</a>
-    </nav>
-  </div>
-</footer>
-
+  <script src="/assets/js/site.js?v=14" defer></script>
 </body>
 </html>
