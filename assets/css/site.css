@@ -1,4 +1,4 @@
-/* Monolyn Labs — Enterprise Glass (static, no trackers) — v17
+/* Monolyn Labs — Enterprise Glass (static, no trackers) — v18
    - No external fonts (uses system + optional Inter if installed)
    - Subtle glass surfaces with solid fallback (no backdrop-filter required)
 */
@@ -569,6 +569,26 @@ p{
   justify-content: space-between;
   gap: var(--s2);
   margin-bottom: 10px;
+}
+
+
+.card .card-head-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.card .app-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  flex: 0 0 auto;
+  object-fit: cover;
+  display: block;
 }
 
 .card .title{
