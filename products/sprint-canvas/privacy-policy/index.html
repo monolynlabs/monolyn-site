@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+
+  <title>Privacy Policy — Sprint Canvas — Monolyn Labs</title>
+  <meta name="description" content="Sprint Canvas (Jira Cloud) privacy policy: data access, storage, retention, and your choices." />
+  <link rel="canonical" href="https://monolyn.nl/products/sprint-canvas/privacy-policy/" />
+
+  <link rel="icon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="/assets/css/site.css?v=18" />
+
+  <meta name="theme-color" content="#F5F5F5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#07090A" media="(prefers-color-scheme: dark)" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav glass">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Monolyn Labs home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Monolyn Labs</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/products/" aria-current="page">Products</a>
+<a class="nav-link" href="/support/">Support</a>
+<a class="nav-link" href="/privacy/">Privacy</a>
+<a class="nav-link" href="/terms/">Terms</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="main">
+    <div class="container">
+<section class="prose">
+  <div class="kicker">Policy</div>
+  <h1>Privacy Policy — Sprint Canvas: Capacity for Jira</h1>
+
+  <div class="note glass" style="margin-top: var(--s3);">
+    <p style="margin: 0; color: var(--muted);">
+      Effective date: <strong style="color: var(--text);">2026-01-04</strong><br />
+      Partner / Vendor: <strong style="color: var(--text);">Monolyn Labs</strong><br />
+      Support contact: <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>
+    </p>
+  </div>
+
+  <p>This Privacy Policy describes how Monolyn Labs ("we", "us") collects, uses, stores, and shares information when you use Sprint Canvas: Capacity for Jira (the "App").</p>
+
+  <h2>Scope</h2>
+  <p>The App runs inside Jira Cloud using Atlassian Forge. It displays sprint capacity insights (demand vs capacity, utilization, and health) for Scrum boards.</p>
+
+  <h2>Data we access (from your Jira site)</h2>
+  <p>To calculate and display sprint capacity metrics, the App may access:</p>
+  <ul>
+    <li>Project identifiers (project key / id) — to load and store project-level configuration.</li>
+    <li>Boards (Scrum) + board configuration — to detect estimation configuration (Story Points vs time / custom field).</li>
+    <li>Sprints (active and future) — to show the next 3 sprints.</li>
+    <li>Issues in sprints — to read fields needed for calculations, including:
+      <ul>
+        <li>estimation field value (Story Points or time field)</li>
+        <li>assignee (accountId and display name)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Data we store</h2>
+  <p>We store configuration in Atlassian Forge Storage, scoped to the Jira site + project, such as:</p>
+  <ul>
+    <li>selected Scrum board id (and board name)</li>
+    <li>default weekly capacity per person</li>
+    <li>optional per-person capacity overrides (keyed by assignee accountId)</li>
+  </ul>
+
+  <h2>Data we do not store</h2>
+  <ul>
+    <li>We do not persist issue descriptions, comments, attachments, or other issue content.</li>
+    <li>We do not send Jira data to third-party servers (the App does not use external network calls).</li>
+  </ul>
+
+  <h2>How we use the data</h2>
+  <p>We use accessed data only to:</p>
+  <ul>
+    <li>compute sprint demand, capacity, utilization, and health signals</li>
+    <li>identify data quality (unestimated / unassigned work) to calculate confidence</li>
+    <li>render UI inside Jira for authorized users</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>We do not sell your data. We do not share customer data with third parties, except as necessary to provide the App via Atlassian’s platform.</p>
+
+  <h2>Security</h2>
+  <p>The App is built on Atlassian Forge. Data transmission occurs over Atlassian infrastructure. Configuration is stored using Atlassian-provided storage.</p>
+
+  <h2>Data retention</h2>
+  <p>Configuration is retained while the App remains installed, unless removed or overwritten by users.</p>
+  <p>To request deletion of stored configuration, contact us at <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>You can uninstall the App to stop further access.</li>
+    <li>You can contact us to request deletion of stored configuration.</li>
+  </ul>
+
+  <h2>Changes</h2>
+  <p>We may update this Privacy Policy from time to time. We will update the effective date above.</p>
+
+  <h2>Contact</h2>
+  <p>For privacy questions, contact: <a href="mailto:security@monolyn.nl">security@monolyn.nl</a>.</p>
+</section>
+    </div>
+  </main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-tagline"></div>
+        <div class="footer-meta">
+          © 2026 Monolyn Labs • KVK 99726009 • BTW-id NL005406176B77 • Keurenplein 41, 1069CD Amsterdam, Box D1351, Netherlands • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/products/">Products</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://x.com/monolynlabs" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js?v=18" defer></script>
+</body>
+</html>
