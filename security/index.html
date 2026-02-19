@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <title>Security Policy — Monolyn Labs</title>
+  <meta name="description" content="Security policy and vulnerability disclosure process for Monolyn Labs products." />
+  <link rel="canonical" href="https://monolyn.nl/security/" />
+  <link rel="icon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=18" />
+  <meta name="theme-color" content="#F5F5F5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#07090A" media="(prefers-color-scheme: dark)" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav glass">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Monolyn Labs home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Monolyn Labs</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/products/">Products</a>
+<a class="nav-link" href="/support/">Support</a>
+<a class="nav-link" href="/privacy/">Privacy</a>
+<a class="nav-link" href="/terms/">Terms</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="main">
+    <div class="container">
+  <section class="prose">
+    <div class="kicker">Policy</div>
+    <h1>Security Policy &amp; Vulnerability Disclosure</h1>
+
+    <div class="note glass" style="margin-top: var(--s3);">
+      <p style="margin: 0; color: var(--muted);">Effective date: <strong style="color: var(--text);">2026-02-19</strong></p>
+    </div>
+
+    <p>
+      This page describes how to report security issues in Monolyn Labs products and what you can expect from us.
+      For machine-readable contact discovery, see <a href="/.well-known/security.txt">/.well-known/security.txt</a>.
+    </p>
+
+    <h2>1. How to report a vulnerability</h2>
+    <ul>
+      <li>Email: <a href="mailto:security@monolyn.nl">security@monolyn.nl</a></li>
+      <li>Subject line: <strong>SECURITY:</strong> short summary</li>
+    </ul>
+
+    <p>Please include (if available):</p>
+    <ul>
+      <li>Product name (e.g., iOS app name, or Atlassian Cloud app name)</li>
+      <li>Version/build (or Marketplace app version)</li>
+      <li>Steps to reproduce (clear and minimal)</li>
+      <li>Expected vs actual behavior</li>
+      <li>Proof-of-concept (PoC) and/or screenshots</li>
+      <li>Impact assessment (what an attacker could do)</li>
+    </ul>
+
+    <p><strong>Please avoid:</strong> sending sensitive personal data, secrets, or production customer data. If you need to share sensitive material, request a secure channel first.</p>
+
+    <h2>2. Response targets</h2>
+    <ul>
+      <li>Acknowledgement: within <strong>2 business days</strong> (best effort)</li>
+      <li>Initial assessment / next steps: within <strong>5 business days</strong> (best effort)</li>
+      <li>Fix timelines vary based on severity and release constraints</li>
+    </ul>
+
+    <h2>3. Coordinated disclosure</h2>
+    <p>
+      We support coordinated vulnerability disclosure. Please do not publicly disclose the issue until we have had a reasonable opportunity to investigate and release a fix or mitigation.
+      We will communicate an ETA when possible.
+    </p>
+
+    <h2>4. Scope</h2>
+    <p>This policy covers Monolyn Labs products, including:</p>
+    <ul>
+      <li>Monolyn Labs iOS apps published on the App Store</li>
+      <li>Monolyn Labs Atlassian Cloud apps (e.g., Jira Cloud apps)</li>
+    </ul>
+
+    <p style="color: var(--muted);">
+      Note: Some Atlassian Cloud apps run on Atlassian Forge and operate within Atlassian’s hosting environment.
+      If a product uses third-party services or external network calls, this is documented in the relevant product privacy policy.
+    </p>
+
+    <h2>5. Bug bounty</h2>
+    <p>We do not currently run a public bug bounty program.</p>
+
+    <h2>6. Contact</h2>
+    <p>
+      Security: <a href="mailto:security@monolyn.nl">security@monolyn.nl</a><br/>
+      Support: <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>
+    </p>
+  </section>
+    </div>
+  </main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-tagline"></div>
+        <div class="footer-meta">
+          © 2026 Monolyn Labs • KVK 99726009 • BTW-id NL005406176B77 • Keurenplein 41, 1069CD Amsterdam, Box D1351, Netherlands • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/products/">Products</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://x.com/monolynlabs" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js?v=18" defer></script>
+</body>
+</html>
