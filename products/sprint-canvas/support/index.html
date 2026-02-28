@@ -7,7 +7,7 @@
   <meta name="supported-color-schemes" content="light dark" />
 
   <title>Support — Sprint Canvas — Monolyn Labs</title>
-  <meta name="description" content="Sprint Canvas support: troubleshooting, bug reports, and feature requests." />
+  <meta name="description" content="Support for Sprint Canvas: contact details, service targets, security vulnerability handling, and troubleshooting." />
   <link rel="canonical" href="https://monolyn.nl/products/sprint-canvas/support/" />
 
   <link rel="icon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
@@ -55,91 +55,82 @@
 
   <div class="note glass" style="margin-top: var(--s3);">
     <p style="margin: 0; color: var(--muted);">
-      <strong style="color: var(--text);">Support contact:</strong>
-      <a href="mailto:support@monolyn.nl">support@monolyn.nl</a><br />
-      <strong style="color: var(--text);">Support hours:</strong>
-      Mon–Fri, 10:00–18:00 CET (best effort)<br />
-      <strong style="color: var(--text);">Target response time:</strong>
-      within 2 business days (best effort)
+      Last updated: <strong style="color: var(--text);">2026-02-28</strong><br />
+      <strong style="color: var(--text);">Support email:</strong> <a href="mailto:support@monolyn.nl">support@monolyn.nl</a><br />
+      <strong style="color: var(--text);">Support phone:</strong> <a href="tel:+31653707921">+31 653707921</a><br />
+      <strong style="color: var(--text);">Support hours:</strong> Mon–Fri, 10:00–18:00 CET/CEST<br />
+      <strong style="color: var(--text);">Primary channel:</strong> Email is the primary support channel. Phone is available for urgent issues.
     </p>
   </div>
 
-  <p>Please avoid sending sensitive personal data.</p>
+  <p>Please avoid sending secrets, production credentials, or sensitive personal data in email.</p>
 
-  <h2>What the app does</h2>
-  <p>Sprint Canvas adds a Capacity page to Jira projects (Project page module). It uses a selected Scrum board to compute demand vs capacity for the next 3 sprints and shows:</p>
+  <h2>Service targets</h2>
   <ul>
-    <li>demand vs capacity (in Story Points or Hours/Days, depending on board estimation)</li>
-    <li>utilization %</li>
-    <li>health for the next 3 sprints (OK / Overbooked / No signal)</li>
-    <li>data quality signals (unestimated / unassigned)</li>
+    <li><strong>P1 critical outage</strong>: the app is unavailable or materially unusable for most users. Initial response target: <strong>within 1 business day</strong>.</li>
+    <li><strong>P2 major issue</strong>: a core workflow is impaired but a workaround may exist. Initial response target: <strong>within 2 business days</strong>.</li>
+    <li><strong>P3 general question or minor issue</strong>: informational questions, low-impact defects, or enhancement requests. Initial response target: <strong>within 3 business days</strong>.</li>
   </ul>
 
-  <h2>Known limitations</h2>
+  <h2>Security vulnerability handling</h2>
+  <p>Security reports should be sent to <a href="mailto:security@monolyn.nl">security@monolyn.nl</a>. For cloud security vulnerabilities affecting Sprint Canvas, Monolyn Labs follows the <a href="https://developer.atlassian.com/platform/marketplace/security-bugfix-policy/" rel="noopener noreferrer">Atlassian Marketplace Security Bug Fix Policy</a> remediation timelines for cloud apps.</p>
   <ul>
-    <li>Scrum boards only (Kanban boards are not supported).</li>
-    <li>The app focuses on the next 3 sprints (active + future).</li>
-    <li>Best signal requires:
-      <ul>
-        <li>issues estimated, and</li>
-        <li>issues assigned to people (for assignee-based capacity scaling / overrides)</li>
-      </ul>
-    </li>
+    <li><strong>Critical</strong> (CVSS 9.0 and above): targeted remediation within <strong>4 weeks</strong> of report or triage.</li>
+    <li><strong>High</strong> (CVSS 7.0 and above): targeted remediation within <strong>6 weeks</strong> of report or triage.</li>
+    <li><strong>Medium</strong> (CVSS 4.0 and above): targeted remediation within <strong>8 weeks</strong> of report or triage.</li>
+    <li><strong>Low</strong> (CVSS below 4.0): targeted remediation within <strong>25 weeks</strong> of report or triage.</li>
   </ul>
+  <p>See also the Monolyn Labs <a href="/security/">Security Policy</a> and <a href="/.well-known/security.txt">security.txt</a>.</p>
 
-  <h2>Troubleshooting</h2>
-
-  <h3>1) Health shows “No signal”</h3>
-  <p><strong>Common causes:</strong></p>
-  <ul>
-    <li>Sprint has no issues</li>
-    <li>Issues exist but are unestimated / unassigned</li>
-    <li>Board estimation is not configured</li>
-  </ul>
-  <p><strong>What to do:</strong></p>
-  <ul>
-    <li>Add estimates to remaining issues</li>
-    <li>Assign issues to people</li>
-    <li>Ensure the board uses a numeric estimation field (Story Points or time)</li>
-  </ul>
-
-  <h3>2) Utilization is missing / blank</h3>
-  <p><strong>Utilization relies on:</strong></p>
-  <ul>
-    <li>detected estimation field (Story Points or time)</li>
-    <li>a non-empty sprint issue set</li>
-    <li>configured capacity</li>
-  </ul>
-  <p><strong>What to do:</strong></p>
-  <ul>
-    <li>Confirm sprint issues have estimates</li>
-    <li>Confirm capacity is configured in Settings</li>
-  </ul>
-
-  <h3>3) I changed scopes and now the app errors</h3>
-  <p>If app scopes changed, Jira may require a re-consent / upgrade cycle.</p>
-  <p><strong>What to do:</strong></p>
-  <ul>
-    <li><code>forge deploy -e production</code></li>
-    <li><code>forge install --upgrade -e production -p Jira -s &lt;your-site&gt;.atlassian.net</code></li>
-  </ul>
-
-  <h2>Data &amp; privacy</h2>
-  <p>The app does not send Jira data to external services. It stores only project configuration (board id + capacity settings + optional overrides) in Forge Storage.</p>
-  <p>Privacy policy: <a href="/products/sprint-canvas/privacy-policy/">/products/sprint-canvas/privacy-policy/</a></p>
-
-  <h2>Reporting bugs / feature requests</h2>
-  <p>Include:</p>
+  <h2>What to include in a support request</h2>
   <ul>
     <li>Jira site URL</li>
     <li>project key</li>
-    <li>board id (if known)</li>
-    <li>steps to reproduce + screenshots</li>
-    <li>Forge environment (development/production) and app version</li>
+    <li>board id or board name, if known</li>
+    <li>environment and app version, if known</li>
+    <li>steps to reproduce</li>
+    <li>screenshots or screen recording, if available</li>
+    <li>what you expected to happen versus what actually happened</li>
   </ul>
 
-  <h2>Marketplace</h2>
-  <p>If you arrived here from Atlassian Marketplace, use Support and Privacy Policy above.</p>
+  <h2>Common issues</h2>
+
+  <h3>No Scrum boards found</h3>
+  <p>Sprint Canvas requires a Jira Software Scrum board in the current project. Create a Scrum board or verify that the current user can access it.</p>
+
+  <h3>Health shows “No signal”</h3>
+  <p>This usually means the sprint has no assigned issues, no detected assignees, or insufficient data to derive capacity.</p>
+
+  <h3>Health shows “Counts”</h3>
+  <p>The selected board’s estimation method could not be read. Configure Story Points or a time-based estimate field on the board, then reload the page.</p>
+
+  <h3>Utilization is blank</h3>
+  <p>Confirm that the sprint has estimated issues, at least one detected assignee, and a non-empty capacity setting.</p>
+
+  <h3>Recent scope change or deployment</h3>
+  <p>If app scopes changed, Jira may require a re-consent or upgrade. In that case, run <code>forge install --upgrade</code> for the relevant site and environment.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Scrum boards only. Kanban boards are not supported.</li>
+    <li>The app focuses on the next three sprints.</li>
+    <li>Best results depend on issues being estimated and assigned.</li>
+  </ul>
+
+  <h2>Data, privacy, and deletion</h2>
+  <p>Sprint Canvas stores only project-level configuration in Forge Storage, such as the selected board and capacity settings. It does not persist issue descriptions, comments, or attachments, and it does not send Jira data to third-party external services.</p>
+  <ul>
+    <li><a href="/products/sprint-canvas/privacy-policy/">Privacy Policy</a></li>
+    <li>Deletion requests: <a href="mailto:support@monolyn.nl">support@monolyn.nl</a></li>
+  </ul>
+
+  <h2>Reference links</h2>
+  <ul>
+    <li><a href="/products/sprint-canvas/">Documentation</a></li>
+    <li><a href="/products/sprint-canvas/privacy-policy/">Privacy Policy</a></li>
+    <li><a href="/security/">Security Policy</a></li>
+    <li><a href="/terms/">Terms / EULA</a></li>
+  </ul>
 </section>
     </div>
   </main>

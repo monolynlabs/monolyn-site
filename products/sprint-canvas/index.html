@@ -6,8 +6,8 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="supported-color-schemes" content="light dark" />
 
-  <title>Sprint Canvas Docs — Monolyn Labs</title>
-  <meta name="description" content="Support and privacy policy for Sprint Canvas: Capacity for Jira (Atlassian Cloud)." />
+  <title>Sprint Canvas Documentation — Monolyn Labs</title>
+  <meta name="description" content="Documentation for Sprint Canvas: setup, configuration, calculations, testing, troubleshooting, and data handling." />
   <link rel="canonical" href="https://monolyn.nl/products/sprint-canvas/" />
 
   <link rel="icon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
@@ -51,31 +51,141 @@
     <div class="container">
 <section class="prose">
   <div class="kicker">Docs</div>
-  <h1>Sprint Canvas Docs</h1>
+  <h1>Sprint Canvas Documentation</h1>
 
-  <p>Official documentation for <strong>Sprint Canvas: Capacity for Jira</strong> — an Atlassian Forge app by Monolyn Labs.</p>
+  <div class="note glass" style="margin-top: var(--s3);">
+    <p style="margin: 0; color: var(--muted);">
+      Last updated: <strong style="color: var(--text);">2026-02-28</strong><br />
+      Official product docs for customers and Atlassian Marketplace review.<br />
+      Quick links: <a href="/products/sprint-canvas/support/">Support</a> · <a href="/products/sprint-canvas/privacy-policy/">Privacy Policy</a> · <a href="/security/">Security Policy</a> · <a href="/terms/">Terms / EULA</a>
+    </p>
+  </div>
 
-  <h2>Start here</h2>
+  <p>Sprint Canvas: Capacity for Jira is an Atlassian Forge app by Monolyn Labs. It adds a <strong>Capacity</strong> page to Jira projects and helps teams compare sprint demand versus capacity for the next three sprints.</p>
+
+  <h2>What Sprint Canvas does</h2>
   <ul>
-    <li><strong>Support</strong> — contact, bug reports, feature requests → <a href="/products/sprint-canvas/support/">Support</a></li>
-    <li><strong>Privacy Policy</strong> — data handling and permissions → <a href="/products/sprint-canvas/privacy-policy/">Privacy Policy</a></li>
+    <li>adds a project page named <strong>Capacity</strong> inside Jira</li>
+    <li>uses a selected Jira Software <strong>Scrum board</strong> for calculations</li>
+    <li>loads the <strong>next 3 sprints</strong> (active plus future)</li>
+    <li>calculates <strong>demand</strong>, <strong>capacity</strong>, <strong>delta</strong>, <strong>utilization</strong>, and <strong>health</strong></li>
+    <li>supports a <strong>default weekly capacity per person</strong> and optional <strong>per-person overrides</strong></li>
+    <li>shows <strong>data quality badges</strong> when work is unestimated, unassigned, truncated, or when board estimation cannot be read</li>
   </ul>
 
-  <h2>What is this page?</h2>
-  <p>This page contains the public docs for users and Atlassian Marketplace review:</p>
+  <h2>Prerequisites</h2>
   <ul>
-    <li>Support instructions</li>
-    <li>Privacy policy</li>
+    <li>Jira Cloud with Jira Software access</li>
+    <li>a <strong>Scrum board</strong> associated with the target project</li>
+    <li>board estimation configured to use <strong>Story Points</strong> or a <strong>time-based estimate field</strong></li>
+    <li>issues in the target sprints should be <strong>assigned</strong> and <strong>estimated</strong> for the strongest signal</li>
+    <li>the app must be installed and the user must have permission to view the project and board data</li>
   </ul>
 
-  <h2>Quick navigation</h2>
+  <h2>How to open Sprint Canvas in Jira</h2>
+  <ol>
+    <li>Open the Jira project where Sprint Canvas is installed.</li>
+    <li>In the project navigation, open <strong>Capacity</strong>.</li>
+    <li>If no board is selected yet, open <strong>Settings</strong>.</li>
+    <li>Select the Scrum board Sprint Canvas should use.</li>
+    <li>The app then loads the next three sprints automatically.</li>
+  </ol>
+
+  <h2>Configuration</h2>
+
+  <h3>1) Select a Scrum board</h3>
+  <p>Sprint Canvas reads the project’s available Scrum boards. Pick the board that represents the sprint plan for the project.</p>
+
+  <h3>2) Set the default capacity per person</h3>
+  <p>Set a weekly capacity value for each person. The initial default is <strong>20</strong>. This value is applied per person, per week, and Sprint Canvas scales it by sprint length.</p>
+
+  <h3>3) Optional per-person overrides</h3>
+  <p>If one team member has a different available capacity, add an override for that person. Overrides appear after Sprint Canvas detects assignees in the upcoming sprints.</p>
+
+  <h3>4) Auto-save behavior</h3>
+  <p>Settings are saved automatically. You do not need a separate save button inside the app UI.</p>
+
+  <h2>How calculations work</h2>
+  <ul>
+    <li><strong>Demand</strong>: Sprint Canvas sums the estimation field used by the selected board. If the board uses a time-based field, the app converts stored seconds into <strong>hours</strong> for display.</li>
+    <li><strong>Capacity</strong>: Sprint Canvas uses the detected assignees in the sprint, multiplies each person’s weekly capacity by the sprint length in weeks, and applies any configured overrides.</li>
+    <li><strong>Delta</strong>: Capacity minus demand.</li>
+    <li><strong>Utilization</strong>: Demand divided by capacity.</li>
+    <li><strong>Unit detection</strong>: the app automatically uses the board’s estimation method, so the unit is derived from Jira configuration rather than manually chosen inside the app.</li>
+  </ul>
+
+  <h2>How to interpret health and signals</h2>
+  <ul>
+    <li><strong>OK</strong>: utilization is below 85%.</li>
+    <li><strong>Tight</strong>: utilization is 85% to 100%.</li>
+    <li><strong>Overbooked</strong>: utilization is above 100%.</li>
+    <li><strong>No signal</strong>: Sprint Canvas cannot derive usable capacity, usually because there are no assigned issues, no assignees detected, or capacity cannot be calculated.</li>
+    <li><strong>No capacity</strong>: demand exists but derived capacity is zero.</li>
+    <li><strong>Counts</strong>: the board estimation method could not be read, so Sprint Canvas falls back to issue counts instead of numeric demand.</li>
+  </ul>
+
+  <p>Data quality badges may appear for:</p>
+  <ul>
+    <li><strong>No estimation</strong></li>
+    <li><strong>Unestimated</strong> issues</li>
+    <li><strong>Unassigned</strong> issues</li>
+    <li><strong>Board config error</strong></li>
+    <li><strong>Truncated</strong> results when a very large sprint hits a safety limit</li>
+  </ul>
+
+  <h2>How to test on a fresh Jira project</h2>
+  <ol>
+    <li>Create or use a Jira Software project with a <strong>Scrum board</strong>.</li>
+    <li>Create one active sprint and one or two future sprints.</li>
+    <li>Add several issues to those sprints.</li>
+    <li>Assign issues to team members.</li>
+    <li>Add estimates to the issues using the board’s configured estimation method.</li>
+    <li>Open the project’s <strong>Capacity</strong> page.</li>
+    <li>Select the Scrum board in <strong>Settings</strong>.</li>
+    <li>Set the default weekly capacity and any test overrides.</li>
+    <li>Verify that the app shows Current sprint, Health, and Canvas data for the next three sprints.</li>
+    <li>Check that utilization, delta, and health change when you add or remove estimates, assignments, or overrides.</li>
+  </ol>
+
+  <h2>Troubleshooting</h2>
+
+  <h3>No Scrum boards found</h3>
+  <p>Sprint Canvas requires a Jira Software Scrum board in the project. Create a Scrum board or confirm that the current user can access the board.</p>
+
+  <h3>Health shows “No signal”</h3>
+  <p>Common causes are: no sprint issues, unassigned issues, unestimated issues, or missing estimation configuration on the board.</p>
+
+  <h3>Health shows “Counts”</h3>
+  <p>This means Sprint Canvas could not read a usable estimation method from the board configuration. Configure Story Points or a time-based estimate field on the board.</p>
+
+  <h3>Utilization is blank or missing</h3>
+  <p>Confirm that the sprint has estimates, at least one detected assignee, and a valid capacity setting.</p>
+
+  <h3>The app errors after a scope change or upgrade</h3>
+  <p>If app scopes changed, Jira may require a re-consent or upgrade cycle. In that case, run <code>forge install --upgrade</code> for the relevant environment and site.</p>
+
+  <h2>Data, privacy, and storage</h2>
+  <p>Sprint Canvas stores only project-level configuration in Atlassian Forge Storage, such as the selected board id, board name, default weekly capacity, and per-person overrides.</p>
+  <ul>
+    <li>It does <strong>not</strong> persist issue descriptions, comments, or attachments.</li>
+    <li>It does <strong>not</strong> send Jira data to third-party external services.</li>
+    <li>It uses Atlassian Forge and Jira APIs for the app’s functionality inside Jira Cloud.</li>
+  </ul>
+  <p>See the full <a href="/products/sprint-canvas/privacy-policy/">Privacy Policy</a> for details.</p>
+
+  <h2>Uninstall and data deletion</h2>
+  <ul>
+    <li>Uninstall the app in Jira to stop further access.</li>
+    <li>To request deletion of stored configuration, email <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>.</li>
+  </ul>
+
+  <h2>Support and policy links</h2>
   <ul>
     <li><a href="/products/sprint-canvas/support/">Support</a></li>
     <li><a href="/products/sprint-canvas/privacy-policy/">Privacy Policy</a></li>
+    <li><a href="/security/">Security Policy</a></li>
+    <li><a href="/terms/">Terms / EULA</a></li>
   </ul>
-
-  <h2>Marketplace</h2>
-  <p>If you arrived here from Atlassian Marketplace, use Support and Privacy Policy above.</p>
 </section>
     </div>
   </main>
