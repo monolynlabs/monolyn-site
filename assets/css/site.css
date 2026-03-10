@@ -1,4 +1,4 @@
-/* Monolyn Labs — Enterprise Glass (static, no trackers) — v18
+/* Monolyn Labs — Enterprise Glass (static, no trackers) — v19
    - No external fonts (uses system + optional Inter if installed)
    - Subtle glass surfaces with solid fallback (no backdrop-filter required)
 */
@@ -724,4 +724,129 @@ p{
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
+}
+
+
+/* Sprint Canvas acquisition landing page */
+.landing-hero{
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: var(--s4);
+  align-items: center;
+}
+
+.hero-copy .lede{
+  max-width: 64ch;
+}
+
+.micro-proof,
+.inline-note{
+  font-size: 14px;
+  color: var(--muted-2);
+}
+
+.micro-proof{
+  margin-top: var(--s2);
+}
+
+.landing-shot{
+  margin: 0;
+  padding: 14px;
+  border-radius: 24px;
+}
+
+.landing-shot img{
+  display: block;
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-sm);
+}
+
+.landing-shot figcaption{
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+.feature-card{
+  height: 100%;
+}
+
+.feature-card h3{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feature-card p{
+  margin: 0;
+}
+
+.landing-grid-3 .card{
+  grid-column: span 4;
+}
+
+.cta-panel{
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.cta-panel h2{
+  margin-top: 0;
+}
+
+.faq-grid{
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item{
+  padding: 0;
+  overflow: hidden;
+}
+
+.faq-item summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-weight: 640;
+  letter-spacing: -0.01em;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display: none;
+}
+
+.faq-item summary::after{
+  content: "+";
+  font-size: 20px;
+  line-height: 1;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.faq-item[open] summary::after{
+  content: "–";
+  color: var(--text);
+}
+
+.faq-item p{
+  margin: 0;
+  padding: 0 18px 18px;
+}
+
+@media (max-width: 980px){
+  .landing-hero{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px){
+  .landing-grid-3 .card{
+    grid-column: span 12;
+  }
 }

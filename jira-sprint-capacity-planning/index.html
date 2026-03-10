@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+
+  <title>Sprint capacity planning in Jira Cloud | Sprint Canvas</title>
+  <meta name="description" content="Sprint capacity planning in Jira Cloud without spreadsheets. Sprint Canvas adds a Capacity page to Jira projects and shows demand vs capacity across the next 3 sprints." />
+  <link rel="canonical" href="https://monolyn.nl/jira-sprint-capacity-planning/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sprint capacity planning in Jira Cloud | Sprint Canvas" />
+  <meta property="og:description" content="See demand vs capacity across the next 3 sprints inside Jira project navigation." />
+  <meta property="og:url" content="https://monolyn.nl/jira-sprint-capacity-planning/" />
+  <meta property="og:image" content="https://monolyn.nl/assets/products/sprint-canvas/sprint-capacity-planning-overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sprint capacity planning in Jira Cloud | Sprint Canvas" />
+  <meta name="twitter:description" content="See demand vs capacity across the next 3 sprints inside Jira project navigation." />
+  <meta name="twitter:image" content="https://monolyn.nl/assets/products/sprint-canvas/sprint-capacity-planning-overview.png" />
+
+  <link rel="icon" href="/assets/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="/assets/css/site.css?v=19" />
+
+  <meta name="theme-color" content="#F5F5F5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#07090A" media="(prefers-color-scheme: dark)" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sprint Canvas for Jira (Capacity Planning)",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Jira Cloud",
+    "description": "Sprint capacity planning in Jira Cloud without spreadsheets. Sprint Canvas adds a Capacity page to Jira projects and shows demand vs capacity across the next 3 sprints.",
+    "url": "https://monolyn.nl/jira-sprint-capacity-planning/",
+    "author": {
+      "@type": "Organization",
+      "name": "Monolyn Labs",
+      "url": "https://monolyn.nl/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://marketplace.atlassian.com/apps/186560902?tab=overview"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which Jira setup does Sprint Canvas support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sprint Canvas works with Jira Cloud and Jira Software Scrum boards. After installation, select the board in Settings and the app loads the active sprint plus the next two future sprints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Sprint Canvas use story points or hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sprint Canvas reads the estimation method configured on the selected Scrum board. It can surface story points or time-based estimates converted into hours for display."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What data does Sprint Canvas store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sprint Canvas stores only minimal project-level configuration in Atlassian Forge storage, such as the selected board, default weekly capacity, and per-person overrides. It does not send Jira data to external services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does setup take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Setup is usually a few minutes: install from Atlassian Marketplace, open the Capacity page in Jira, choose the Scrum board, and set the default weekly capacity. Settings auto-save."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav glass">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Monolyn Labs home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Monolyn Labs</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" type="button">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" href="/products/" aria-current="page">Products</a>
+<a class="nav-link" href="/support/">Support</a>
+<a class="nav-link" href="/privacy/">Privacy</a>
+<a class="nav-link" href="/security/">Security</a>
+<a class="nav-link" href="/terms/">Terms</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="main">
+    <div class="container">
+      <section class="landing-hero">
+        <div class="hero-copy">
+          <div class="kicker">Sprint Canvas for Jira (Capacity Planning)</div>
+          <h1>Sprint capacity planning in Jira without spreadsheets</h1>
+          <p class="lede">
+            See demand vs capacity across the next 3 sprints inside Jira project navigation.
+            Sprint Canvas adds a <strong>Capacity</strong> page to Jira projects, surfaces utilization and health,
+            and highlights unestimated or unassigned work before sprint planning drifts.
+          </p>
+
+          <div class="chips" aria-label="Key product signals">
+            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Jira Cloud</span>
+            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Next 3 sprints</span>
+            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>No external services</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/186560902?tab=overview" rel="noopener noreferrer">View on Atlassian Marketplace</a>
+            <a class="btn btn-secondary" href="/products/sprint-canvas/">Read docs</a>
+            <a class="btn btn-secondary" href="/products/sprint-canvas/support/">Support</a>
+          </div>
+
+          <p class="micro-proof">Built on Atlassian Forge. Minimal project-level configuration only. Works inside Jira project navigation.</p>
+        </div>
+
+        <figure class="landing-shot glass strong">
+          <img src="/assets/products/sprint-canvas/sprint-capacity-planning-overview.png" width="1535" height="2048" alt="Sprint Canvas for Jira showing settings, current sprint demand and capacity, health, and the next 3 sprint canvas inside Jira project navigation." />
+          <figcaption>Settings summary, current sprint signal, health, and the next 3 sprint capacity view inside Jira.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Why teams still fall back to spreadsheets</h2>
+            <p>Jira already knows the board, sprint dates, assignees, and estimates — but planning signal still gets reconstructed manually.</p>
+          </div>
+        </div>
+
+        <div class="grid landing-grid-3">
+          <article class="card glass feature-card">
+            <h3>No single view across the next 3 sprints</h3>
+            <p>Teams often scan sprint after sprint by hand to understand whether upcoming work is still within capacity.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Low-confidence plans from missing inputs</h3>
+            <p>Unestimated or unassigned work quietly weakens planning confidence, but the signal is rarely surfaced clearly enough inside Jira.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Heavy tools solve a broader problem than you need</h3>
+            <p>Many resource-planning tools aim at portfolio-wide staffing. Sprint Canvas stays focused on the Jira project page and the next planning conversation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>What Sprint Canvas surfaces</h2>
+            <p>One project page, one selected Scrum board, and an explainable signal for the next planning conversation.</p>
+          </div>
+        </div>
+
+        <div class="grid landing-grid-2">
+          <article class="card glass feature-card">
+            <h3>Demand vs capacity for the next 3 sprints</h3>
+            <p>Open the Capacity page and compare current and future sprint demand against derived team capacity from the selected Scrum board.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Utilization and health at a glance</h3>
+            <p>See utilization, health labels, and deltas quickly enough to decide whether the plan is healthy, tight, or overbooked.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Data-quality flags, not silent assumptions</h3>
+            <p>Unestimated and unassigned work are surfaced explicitly so weak planning signal does not hide behind a clean-looking sprint.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Board-aware units plus simple overrides</h3>
+            <p>Sprint Canvas reads the board’s estimation method automatically and supports a default weekly capacity plus optional per-person overrides.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Who it is for</h2>
+            <p>Teams that already live in Jira Cloud and want a lighter, clearer planning surface inside the project.</p>
+          </div>
+        </div>
+
+        <div class="grid landing-grid-2">
+          <article class="card glass feature-card audience-card">
+            <h3>Scrum Masters</h3>
+            <p>Get a fast view of whether upcoming sprint demand is still realistic before planning meetings turn into estimate archaeology.</p>
+          </article>
+
+          <article class="card glass feature-card audience-card">
+            <h3>Jira admins</h3>
+            <p>Give teams a clearer capacity signal without moving them out of Jira or forcing a heavier operational planning tool into every project.</p>
+          </article>
+
+          <article class="card glass feature-card audience-card">
+            <h3>Engineering managers</h3>
+            <p>Use one project-page surface to spot overbooked future sprints, missing assignments, or low-confidence plans before delivery slips.</p>
+          </article>
+
+          <article class="card glass feature-card audience-card">
+            <h3>Product and delivery leads</h3>
+            <p>See whether the next few sprints still fit the current team shape without leaving Jira or building yet another spreadsheet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Why it is different</h2>
+            <p>Designed for fast planning signal, not for heavyweight resource management or opaque black-box scoring.</p>
+          </div>
+        </div>
+
+        <div class="grid landing-grid-3">
+          <article class="card glass feature-card">
+            <h3>Inside Jira project navigation</h3>
+            <p>No separate planning destination or spreadsheet handoff. The app lives where the project team already works.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Explainable signals</h3>
+            <p>The app shows what is affecting confidence and why a sprint looks healthy or overbooked instead of hiding the logic behind a score.</p>
+          </article>
+
+          <article class="card glass feature-card">
+            <h3>Privacy-first by default</h3>
+            <p>Built on Atlassian Forge with no external services, focused on minimal project-level configuration rather than broad data extraction.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>FAQ</h2>
+            <p>Short answers for admins, evaluators, and teams testing the app for the first time.</p>
+          </div>
+        </div>
+
+        <div class="faq-grid">
+          <details class="glass faq-item" open>
+            <summary>Which Jira setup does Sprint Canvas support?</summary>
+            <p>Sprint Canvas works with Jira Cloud and Jira Software Scrum boards. After installation, choose the board in Settings and the app loads the active sprint plus the next two future sprints.</p>
+          </details>
+
+          <details class="glass faq-item">
+            <summary>Does Sprint Canvas use story points or hours?</summary>
+            <p>Sprint Canvas reads the estimation method configured on the selected Scrum board. It can surface story points or time-based estimates converted into hours for display.</p>
+          </details>
+
+          <details class="glass faq-item">
+            <summary>What data does Sprint Canvas store?</summary>
+            <p>Sprint Canvas stores only minimal project-level configuration in Atlassian Forge storage, such as the selected board, default weekly capacity, and per-person overrides. It does not send Jira data to external services.</p>
+          </details>
+
+          <details class="glass faq-item">
+            <summary>How long does setup take?</summary>
+            <p>Usually a few minutes: install from Atlassian Marketplace, open the Capacity page in Jira, choose the Scrum board, and set the default weekly capacity. Settings auto-save.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section">
+        <article class="glass strong cta-panel">
+          <div class="kicker">Sprint Canvas</div>
+          <h2>Ready to test it in your Jira project?</h2>
+          <p>
+            Start from the Atlassian Marketplace listing, install the app, choose a Scrum board,
+            and Sprint Canvas will surface demand vs capacity across the next 3 sprints inside Jira.
+          </p>
+          <div class="actions compact">
+            <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/186560902?tab=overview" rel="noopener noreferrer">Open Marketplace listing</a>
+            <a class="btn btn-secondary" href="/products/sprint-canvas/">Documentation</a>
+            <a class="btn btn-secondary" href="/products/sprint-canvas/support/">Support</a>
+          </div>
+          <p class="inline-note">Need setup, troubleshooting, or policy details first? The full docs, support, privacy, and security pages stay live on monolyn.nl.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-tagline"></div>
+        <div class="footer-meta">
+          © 2026 Monolyn Labs • KVK 99726009 • BTW-id NL005406176B77 • Keurenplein 41, 1069CD Amsterdam, Box D1351, Netherlands • <a href="mailto:support@monolyn.nl">support@monolyn.nl</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/products/">Products</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/security/">Security</a>
+        <a href="/terms/">Terms</a>
+        <a href="https://x.com/monolynlabs" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js?v=18" defer></script>
+</body>
+</html>
