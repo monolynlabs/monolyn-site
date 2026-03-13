@@ -850,3 +850,72 @@ p{
     grid-column: span 12;
   }
 }
+
+
+/* Best Shot landing page */
+.bestshot-visual{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bestshot-flow{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.bestshot-step{
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.42);
+}
+
+@media (prefers-color-scheme: dark){
+  .bestshot-step{
+    background: rgba(255,255,255,0.05);
+  }
+}
+
+.bestshot-step-index{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  color: var(--muted-2);
+  margin-bottom: 8px;
+}
+
+.bestshot-step-title{
+  font-size: 0.98rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.bestshot-step-copy{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.bestshot-strip-frame{
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface-solid);
+  overflow: hidden;
+}
+
+.bestshot-strip-frame img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+@media (max-width: 720px){
+  .bestshot-flow{
+    grid-template-columns: 1fr;
+  }
+}
