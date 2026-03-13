@@ -899,23 +899,105 @@ p{
   line-height: 1.55;
 }
 
-.bestshot-strip-frame{
-  padding: 10px;
+.bestshot-primary-shot{
+  display: flex;
+  justify-content: center;
+  padding: 12px;
   border-radius: 20px;
   border: 1px solid var(--border);
   background: var(--surface-solid);
   overflow: hidden;
 }
 
-.bestshot-strip-frame img{
+.bestshot-primary-shot,
+.bestshot-primary-shot:hover,
+.bestshot-screenshot-card,
+.bestshot-screenshot-card:hover{
+  text-decoration: none;
+}
+
+.bestshot-primary-shot img{
   display: block;
-  width: 100%;
+  width: min(100%, 440px);
   height: auto;
-  border-radius: 14px;
+  margin: 0 auto;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: #040608;
+  box-shadow: var(--shadow-sm);
+}
+
+.bestshot-screenshot-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.bestshot-screenshot-card{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 22px;
+  min-height: 100%;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.bestshot-screenshot-card:hover{
+  transform: translateY(-2px);
+}
+
+.bestshot-screenshot-media{
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: #050708;
+  display: flex;
+  justify-content: center;
+}
+
+.bestshot-screenshot-media img{
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  border-radius: 24px;
+  background: #040608;
+  box-shadow: var(--shadow-sm);
+}
+
+.bestshot-screenshot-copy{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bestshot-screenshot-title{
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.bestshot-screenshot-copy p{
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 980px){
+  .bestshot-screenshot-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px){
   .bestshot-flow{
     grid-template-columns: 1fr;
+  }
+
+  .bestshot-primary-shot img{
+    width: min(100%, 380px);
+  }
+
+  .bestshot-screenshot-media img{
+    width: min(100%, 360px);
   }
 }
