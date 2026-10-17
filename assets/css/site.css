@@ -1015,6 +1015,23 @@ p{
 .featured-four .featured-preview{ height:390px; margin-top:0; display:flex; align-items:center; justify-content:center; }
 .featured-four .card-actions{ margin-top:auto; padding-top:var(--s2); }
 
+@media (min-width: 861px){
+  /* Fallback keeps previews and actions at the bottom of equal-height cards. */
+  .featured-four > .card{
+    display:grid;
+    grid-template-rows:auto 1fr 390px auto;
+  }
+  .featured-four .card-actions{ margin-top:0; align-content:start; }
+
+  @supports (grid-template-rows:subgrid){
+    /* Each pair shares header, description, preview and action tracks. */
+    .featured-four > .card{
+      grid-row:span 4;
+      grid-template-rows:subgrid;
+    }
+  }
+}
+
 /* Four-step workflows on the two focused product landing pages. */
 .product-workflow-four{grid-template-columns:repeat(2,minmax(0,1fr));}
 @media(max-width:720px){.product-workflow-four{grid-template-columns:1fr;}}
