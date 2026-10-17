@@ -1009,3 +1009,8 @@ p{
 .authentic-screen{ margin:0; }
 .authentic-screen .bestshot-screenshot-media{ background:var(--surface-solid); }
 .authentic-screen .bestshot-screenshot-media img{ border-radius:8px; background:transparent; }
+
+/* Four equally prominent featured apps; document order is the mobile order. */
+.featured-four > .card{ display:flex; flex-direction:column; gap:var(--s2); }
+.featured-four .featured-preview{ height:390px; margin-top:0; display:flex; align-items:center; justify-content:center; }
+.featured-four .card-actions{ margin-top:auto; padding-top:var(--s2); }
