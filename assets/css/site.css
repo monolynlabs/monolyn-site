@@ -1001,3 +1001,16 @@ p{
     width: min(100%, 360px);
   }
 }
+
+/* Genuine app imagery: reuse the existing cards and screenshot grid. */
+.product-mark{ display:block; width:72px; height:72px; border-radius:18px; margin-bottom:var(--s2); }
+.featured-preview{ display:block; margin-top:var(--s3); padding:14px; border:1px solid var(--border); border-radius:18px; background:var(--surface-solid); }
+.featured-preview img{ display:block; width:auto; max-width:100%; height:auto; max-height:360px; margin:auto; }
+.authentic-screen{ margin:0; }
+.authentic-screen .bestshot-screenshot-media{ background:var(--surface-solid); }
+.authentic-screen .bestshot-screenshot-media img{ border-radius:8px; background:transparent; }
+
+/* Four equally prominent featured apps; document order is the mobile order. */
+.featured-four > .card{ display:flex; flex-direction:column; gap:var(--s2); }
+.featured-four .featured-preview{ height:390px; margin-top:0; display:flex; align-items:center; justify-content:center; }
+.featured-four .card-actions{ margin-top:auto; padding-top:var(--s2); }
